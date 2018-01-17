@@ -1,0 +1,61 @@
+name: "Fk"
+layer {
+	name: "fk-data"
+	type: "MemoryData"
+	top: "data"
+	top: "label"
+	memory_data_param {
+		batch_size: 1783
+		channels: 1
+		width: 96
+		height: 96
+	}
+}
+layer {
+	name: "ip1"
+	type: "InnerProduct"
+	bottom: "data"
+	top: "ip1"
+	param {
+		lr_mult: 1
+	}
+	param {
+		lr_mult: 2
+	}
+	inner_product_param {
+		num_output: 100
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+		}
+	}
+}
+layer {
+	name: "relu1"
+	type: "ReLU"
+	bottom: "ip1"
+	top: "ip1"
+}
+layer {
+	name: "ip2"
+	type: "InnerProduct"
+	bottom: "ip1"
+	top: "ip2"
+	param {
+		lr_mult: 1
+	}
+	param {
+		lr_mult: 2
+	}
+	inner_product_param {
+		num_output: 30
+		weight_filler {
+			type: "xavier"
+		}
+		bias_filler {
+			type: "constant"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+name: "CaffeNet"
+input: "data"
+input_shape {
+  dim: 1 # batchsize
+  dim: 1 # number of colour channels - rgb
+  dim: 28 # width
+  dim: 28 # height
+}
+
+layer {
+  name: "myneuron"
+  type: "MyNeuron"
+  bottom: "data"
+  top: "data_out"
+  my_neuron_param {
+    power : 2
+  }
+}
+
