@@ -21,10 +21,11 @@
 `$ ls test/male |sed "s:^:male/:" | sed "s:$: 1:" >>t_test.txt`
 
 #### 2.convert your images data to the format of LMDB 
+`$ cd ~/caffe/build/tools`
 
-`$ convert_imageset --resize_width=40 --resize_height=40 /home/yll/cafworkspace/2picTest/data/train/ ./t_train.txt ./t_train_lmdb`
+`$ ./convert_imageset  --shuffle --resize_width=40 --resize_height=40 /home/yll/cafworkspace/2picTest/data/train/ ./t_train.txt ./t_train_lmdb`
 
-`$ convert_imageset --resize_width=40 --resize_height=40 /home/yll/cafworkspace/2picTest/data/test/ ./t_test.txt ./t_test_lmdb`
+`$ ./convert_imageset  --shuffle --resize_width=40 --resize_height=40 /home/yll/cafworkspace/2picTest/data/test/ ./t_test.txt ./t_test_lmdb`
 
 
 
