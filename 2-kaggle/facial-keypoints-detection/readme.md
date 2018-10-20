@@ -20,7 +20,6 @@ net1: 见文件 fk_ train _val.prototxt
 `cd ~/caffe`
 
 `./build/tools/caffe train --solver=/public/home/xxbai/cafworkspace/facial-keypoints-detection/fk_solver.prototxt`
-
 /public/home/xxbai/cafworkspace/facial-keypoints-detection  是到达项目的路径
 
 ### 网络二

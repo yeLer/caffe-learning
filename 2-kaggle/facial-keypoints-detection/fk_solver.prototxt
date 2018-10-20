@@ -1,5 +1,5 @@
 # The train/test net protocal buffer definition
-net: "/public/home/xxbai/cafworkspace/facial-keypoints-detection/fk_train_val.prototxt"
+net: "/home/yeler082/test/facial-keypoints-detection/fk_train_val.prototxt"
 test_iter: 1
 test_interval: 500
 base_lr: 0.001
@@ -11,5 +11,5 @@ power: 0.75
 display: 100
 max_iter: 10000
 snapshot: 5000
-snapshot_prefix: "/public/home/xxbai/cafworkspace/facial-keypoints-detection/fk/"
+snapshot_prefix: "/home/yeler082/test/facial-keypoints-detection/facial-keypoints-detection/fk/"
 solver_mode: CPU
